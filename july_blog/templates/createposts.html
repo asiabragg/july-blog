@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="" method="POST">
+    {{form.hidden_tag() }}
+    <div class="blog-post">
+        <fieldset>
+            {{ form.title.label }}
+            {{ form.title(class="form-control", placeholder="Title") }}
+        </fieldset>
+        <fieldset>
+            {{ form.content.label }}
+            {{ form.content(class="form-control", placeholder="Blog Content") }}
+        </fieldset>
+        {{ form.submit(class="btn btn-success")}}
+    </div>
+</form>
+
+{% endblock content %}
